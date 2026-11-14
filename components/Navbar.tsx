@@ -51,7 +51,7 @@ export default function Navbar() {
 
         <Link
           href="/#newsletter"
-          className="hidden rounded-full border border-white/10 bg-white/[0.06] px-9 py-3.5 text-[13px] text-white/90 backdrop-blur-md transition-colors hover:bg-white/15 lg:inline-block"
+          className="hidden rounded-full border border-white/10 bg-white/[0.06] px-8 py-3.5 text-[13px] text-white/90 backdrop-blur-md transition-colors hover:bg-white/15 lg:inline-block"
         >
           Newsletter
         </Link>
