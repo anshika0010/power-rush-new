@@ -1,0 +1,7 @@
+services:
+  rushpower:
+    build: .
+    container_name: rushpower
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3014:3000"
