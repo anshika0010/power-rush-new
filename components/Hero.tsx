@@ -1,6 +1,6 @@
 import { getImageProps } from "next/image";
 import Link from "next/link";
-import heroImg from "@/public/Images/hero-img.jpg";
+import heroImg from "@/public/Images/hero-image.jpg";
 import heroImgPhone from "@/public/Images/hero-img-phn.jpg";
 
 const HERO_ALT = "Power Rush drink mix pouches in Strawberry, Mango, Lemon and Tangy Orange";
@@ -11,12 +11,14 @@ const HERO_ALT = "Power Rush drink mix pouches in Strawberry, Mango, Lemon and T
  */
 function HeroPicture() {
   const common = { alt: HERO_ALT, sizes: "100vw", quality: 80 };
-  const {
-    props: { srcSet: wideSrcSet },
-  } = getImageProps({ ...common, src: heroImg });
+  const { props: wide } = getImageProps({ ...common, src: heroImg });
   const {
     props: { srcSet: tallSrcSet, ...rest },
   } = getImageProps({ ...common, src: heroImgPhone, priority: true });
+  // srcSet is undefined when images are served unoptimised; a <source> without
+  // one is skipped, so fall back to the plain URL or desktop gets the phone shot.
+  const wideSrcSet = wide.srcSet ?? wide.src;
+  const tallSet = tallSrcSet ?? rest.src;
 
   return (
     <div
@@ -32,7 +34,7 @@ function HeroPicture() {
     >
       <picture>
         <source media="(min-width: 640px)" srcSet={wideSrcSet} />
-        <source media="(max-width: 639px)" srcSet={tallSrcSet} />
+        <source media="(max-width: 639px)" srcSet={tallSet} />
         {/* eslint-disable-next-line jsx-a11y/alt-text -- alt comes from getImageProps */}
         <img
           {...rest}

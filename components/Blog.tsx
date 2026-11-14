@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import heroImg from "@/public/Images/hero-img.jpg";
+import heroImg from "@/public/Images/hero-image.jpg";
 import mango from "@/public/Images/mango.jpg";
 import rushpower from "@/public/Images/rushpower.jpg";
 import tangyOrange from "@/public/Images/tangy-orange.jpg";
