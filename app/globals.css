@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rush-blue: #0b33d6;
+  --color-rush-deep: #05168a;
+  --color-rush-navy: #16257f;
+  --color-rush-sky: #1ea4ff;
+  --color-rush-red: #f03a3a;
+  --color-rush-yellow: #ffd21f;
+  --color-rush-orange: #ff7a1a;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-archivo-black);
+  --font-wide: var(--font-tactic);
+  --font-body: var(--font-lexend);
+}
+
+/* Every heading uses the Tactic Sans heading font by default. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-tactic), sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "TacticSansExd";
+  src: url("/fonts/tacticsansexd-med.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Alias used in components */
+@font-face {
+  font-family: "Tactic Sans Extended";
+  src: url("/fonts/tacticsansexd-med.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   TACTIC SANS MEDIUM
+   ========================================================= */
+
+@font-face {
+  font-family: "TacticSans-Med";
+  src: url("/fonts/tacticsansexd-med.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   TACTIC SANS REGULAR
+   ========================================================= */
+
+@font-face {
+  font-family: "TacticSans-Reg";
+  src: url("/fonts/tacticsans-reg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tactic Sans Extended Bold Italic";
+  src: url("/fonts/TacticSansExtExd-BldIt.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===============================
+  TacticSansExd-UltIt 
+==================================== */
+@font-face {
+  font-family: "TacticSansExd-UltIt";
+  src: url("/fonts/tacticsansexd-ultit.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*=====================================================================
+   SF PRO
+   ========================================================= */
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/FontsFree-Net-SFProDisplay-Medium.ttf") format("truetype");
+  font-weight: 510;
+  font-style: normal;
+  font-display: swap;
+}
