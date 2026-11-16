@@ -21,12 +21,12 @@ export default function WhyRush() {
     <section
       id="why-rush"
       aria-labelledby="why-rush-heading"
-      className="relative isolate overflow-hidden bg-black px-4 py-20 font-body text-white sm:px-8 sm:py-28"
+      className="relative isolate overflow-hidden bg-white px-4 py-20 font-body text-black sm:px-8 sm:py-28"
     >
       {/* blue glows */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_55%_70%_at_0%_35%,rgba(16,110,220,0.55),transparent_70%),radial-gradient(ellipse_35%_40%_at_100%_100%,rgba(16,110,220,0.35),transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_55%_70%_at_0%_35%,rgba(13, 87, 172, 0.12),transparent_70%),radial-gradient(ellipse_35%_40%_at_100%_100%,rgba(16,110,220,0.08),transparent_70%)]"
       />
 
       <div className="mx-auto max-w-6xl text-center">
@@ -34,7 +34,7 @@ export default function WhyRush() {
 
         <h2
           id="why-rush-heading"
-          className={`${wide} mx-auto mt-10 max-w-5xl text-[clamp(1.8rem,4.2vw,3.4rem)] leading-[1.05] text-rush-sky`}
+          className={`${wide} mx-auto mt-10 max-w-5xl text-[clamp(1.8rem,4.2vw,3.4rem)] leading-[1.05] text-[#0b5ed7]`}
         >
           Energy for everyday moments, not workouts
         </h2>
@@ -50,7 +50,7 @@ export default function WhyRush() {
             <li key={r.title} className="group flex flex-col items-center">
               <span
                 aria-hidden
-                className={`${wide} bg-gradient-to-b from-[#1a8cff] from-25% to-transparent to-85% bg-clip-text text-[clamp(6.5rem,12vw,10rem)] font-extrabold leading-none text-transparent transition-transform duration-300 group-hover:-translate-y-1`}
+                className={`${wide} bg-gradient-to-b from-[#0b5ed7] from-25% to-transparent to-85% bg-clip-text text-[clamp(6.5rem,12vw,10rem)] font-extrabold leading-none text-transparent transition-transform duration-300 group-hover:-translate-y-1`}
               >
                 {i + 1}
               </span>
@@ -59,7 +59,7 @@ export default function WhyRush() {
               >
                 {r.title}
               </h3>
-              <p className="mt-5 max-w-[17rem] text-sm leading-snug text-white/75">
+              <p className="mt-5 max-w-[17rem] text-sm leading-snug text-black/75">
                 {r.body}
               </p>
             </li>

@@ -41,7 +41,6 @@ function HeroPicture() {
           className="absolute inset-0 h-full w-full object-cover object-bottom sm:object-[72%_center] lg:object-right"
         />
       </picture>
-      {/* tablet: blend the photo's top into the section colour */}
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 hidden h-1/4 bg-gradient-to-b from-rush-deep to-transparent sm:block lg:hidden"
