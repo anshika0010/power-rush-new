@@ -143,7 +143,7 @@ export default function Hero() {
         style={{ backgroundColor: done ? f.panel : "#1ea4ff" }}
       />
 
-      <div className="mx-auto grid max-w-7xl gap-14 px-4 pb-20 pt-32 sm:px-8 lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16 lg:pb-28 lg:pt-40">
+      <div className="mx-auto grid max-w-[1740px] gap-14 px-4 pb-20 pt-32 sm:px-8 lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16 lg:pb-28 lg:pt-40">
         {/* Copy */}
         <div>
           <p className="font-wide text-[11px] font-bold uppercase tracking-[0.16em] text-white/75 sm:text-xs">
@@ -202,7 +202,7 @@ export default function Hero() {
         </div>
 
         {/* Interactive energy card */}
-        <div className="relative mx-auto w-full max-w-[490px] lg:mx-0">
+        <div className="relative mx-auto w-full max-w-[490px] lg:mx-0 lg:justify-self-end">
           <div
             className={`relative rounded-[28px] bg-[#1f1d47] p-6 shadow-[0_30px_80px_rgba(10,6,60,0.55)] transition-shadow duration-700 sm:p-8 ${
               done ? "ring-2 ring-white/20" : ""

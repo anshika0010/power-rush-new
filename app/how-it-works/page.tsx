@@ -61,7 +61,7 @@ export default function HowItWorksPage() {
                 className={`${wide} mt-4 text-[clamp(1rem,2vw,2rem)] font-bold leading-[0.98]`}
               >
                 Tear. Pour.
-                <br />
+                
                 Mix. Go.
               </h1>
               <p className="mt-6 max-w-sm text-base leading-relaxed text-white/90 sm:text-lg">

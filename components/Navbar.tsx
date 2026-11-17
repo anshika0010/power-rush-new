@@ -21,7 +21,7 @@ export function Logo() {
         alt="Power Rush — Your Everyday Performance"
         priority
         sizes="160px"
-        className="h-auto w-[150px] sm:w-[175px]"
+        className="h-auto w-[141px] sm:w-[165px]"
       />
     </Link>
   );
