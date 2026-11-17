@@ -2,9 +2,9 @@
 
 import { useId, useState, type FormEvent } from "react";
 
-const label = "block font-wide text-[11px] font-medium uppercase tracking-wide text-white/90";
+const label = "block font-wide text-[11px] font-medium uppercase tracking-wide text-black";
 const field =
-  "mt-2 w-full border-0 border-b border-white/40 bg-transparent px-0 py-2 text-sm text-white outline-none transition-colors placeholder:text-white/30 focus:border-rush-sky";
+  "mt-2 w-full border-0 border-b border-black/30 bg-transparent px-0 py-2 text-sm text-black outline-none transition-colors placeholder:text-black/40 focus:border-rush-blue";
 
 /** Two-column contact form. The middle grid column is left empty for the logo behind it. */
 export default function ContactForm() {
@@ -40,13 +40,13 @@ export default function ContactForm() {
           <label htmlFor={`${id}-email`} className={label}>Email</label>
           <input id={`${id}-email`} name="email" type="email" required autoComplete="email" className={field} />
         </div>
-        <label htmlFor={`${id}-consent`} className="flex cursor-pointer items-start gap-4 pt-2 text-xs leading-snug text-white/85">
+        <label htmlFor={`${id}-consent`} className="flex cursor-pointer items-start gap-4 pt-2 text-xs leading-snug text-black/80">
           <input
             id={`${id}-consent`}
             name="consent"
             type="checkbox"
             required
-            className="mt-0.5 size-3.5 shrink-0 cursor-pointer accent-rush-sky"
+            className="mt-0.5 size-3.5 shrink-0 cursor-pointer accent-rush-blue"
           />
           <span className="max-w-[12rem]">I give permission to contact me at this email address.</span>
         </label>
@@ -66,17 +66,17 @@ export default function ContactForm() {
           className={`${field} resize-none`}
         />
 
-        <p className="mt-8 text-xs leading-snug text-white/75">
+        <p className="mt-8 text-xs leading-snug text-black/75">
           For information on how to unsubscribe, please review our privacy policy.
         </p>
 
         <div className="mt-8 flex items-center justify-between gap-4">
-          <p role="status" className="text-sm text-rush-sky">
+          <p role="status" className="text-sm text-rush-blue">
             {status === "sent" && "Thanks! We'll get back to you soon."}
           </p>
           <button
             type="submit"
-            className="group inline-flex items-center gap-2 border border-rush-sky/70 px-3 py-1 font-wide text-xs font-medium uppercase tracking-wide text-rush-sky transition-colors hover:bg-rush-sky hover:text-white"
+            className="group inline-flex items-center gap-2 border border-rush-blue px-3 py-1 font-wide text-xs font-medium uppercase tracking-wide text-rush-blue transition-colors hover:bg-rush-blue hover:text-white"
           >
             Send
             <svg

@@ -4,7 +4,7 @@ import BlogComingSoon from "@/components/BlogComingSoon";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
-import blogHeroImg from "@/public/Images/blog-hero-img.png";
+import blogHeroImg from "@/public/Images/blog-hero-img.webp";
 
 export const metadata: Metadata = {
   title: "Blog — Power Rush",

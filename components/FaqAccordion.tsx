@@ -10,9 +10,12 @@ const wide = "font-wide uppercase";
 export default function FaqAccordion({
   items,
   defaultOpen = null,
+  light = false,
 }: {
   items: FaqItem[];
   defaultOpen?: number | null;
+  /** Pale-blue bars with dark text, for white pages. */
+  light?: boolean;
 }) {
   const [open, setOpen] = useState<number | null>(defaultOpen);
   const baseId = useId();
@@ -27,10 +30,16 @@ export default function FaqAccordion({
         return (
           <li
             key={item.q}
-            className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 font-body text-white sm:gap-8"
+            className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 font-body sm:gap-8 ${light ? "text-gray-900" : "text-white"}`}
           >
             {/* Gradient bar: question + answer */}
-            <div className="bg-[linear-gradient(90deg,#08345f_0%,#0b72d6_30%,#08447f_60%,rgba(0,0,0,0)_100%)] lg:w-[78%]">
+            <div
+              className={`lg:w-[78%] ${
+                light
+                  ? "bg-[linear-gradient(90deg,#dbe7ff_0%,#e9f0ff_60%,rgba(255,255,255,0)_100%)]"
+                  : "bg-[linear-gradient(90deg,#08345f_0%,#0b72d6_30%,#08447f_60%,rgba(0,0,0,0)_100%)]"
+              }`}
+            >
               <h3>
                 <button
                   id={btnId}
@@ -52,7 +61,7 @@ export default function FaqAccordion({
                 }`}
               >
                 <div className="overflow-hidden">
-                  <p className="max-w-3xl px-5 pb-4 text-[13px] leading-snug text-white/85 sm:px-6">
+                  <p className={`max-w-3xl px-5 pb-4 text-[13px] leading-snug sm:px-6 ${light ? "text-gray-700" : "text-white/85"}`}>
                     {item.a}
                   </p>
                 </div>

@@ -19,7 +19,7 @@ export default function ProductAbout({
   return (
     <section
       aria-label="About this product"
-      className="relative isolate bg-[linear-gradient(180deg,#2a2e33_0%,#1d2024_45%,#0c0d0f_100%)] px-4 py-14 sm:px-8 sm:py-20"
+      className="relative isolate bg-gray-100 px-4 py-14 sm:px-8 sm:py-20"
     >
       <ul className="mx-auto max-w-3xl space-y-4 sm:space-y-6">
         {items.map((item, i) => {
@@ -35,17 +35,17 @@ export default function ProductAbout({
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setOpen((cur) => (cur === i ? null : i))}
-                  className="flex w-full items-center justify-between gap-6 py-2 text-left outline-none focus-visible:ring-2 focus-visible:ring-rush-sky"
+                  className="flex w-full items-center justify-between gap-6 py-2 text-left outline-none focus-visible:ring-2 focus-visible:ring-rush-blue"
                 >
                   <span
-                    className={`${wide} text-[15px] tracking-wide text-white/85 sm:text-lg`}
+                    className={`${wide} text-[15px] tracking-wide text-gray-900 sm:text-lg`}
                   >
                     {item.title}
                   </span>
                   <svg
                     viewBox="0 0 24 24"
                     aria-hidden
-                    className={`size-4 shrink-0 text-white/85 transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                    className={`size-4 shrink-0 text-gray-900 transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.75"
@@ -65,9 +65,9 @@ export default function ProductAbout({
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="max-w-2xl pt-2 pb-2 text-[13px] leading-snug text-white/80 sm:text-sm">
+                  <div className="max-w-2xl pt-2 pb-2 text-[13px] leading-snug text-gray-700 sm:text-sm">
                     {Array.isArray(item.body) ? (
-                      <ul className="list-disc space-y-1 pl-5 marker:text-rush-sky">
+                      <ul className="list-disc space-y-1 pl-5 marker:text-rush-blue">
                         {item.body.map((line) => (
                           <li key={line}>{line}</li>
                         ))}

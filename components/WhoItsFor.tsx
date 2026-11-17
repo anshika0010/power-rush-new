@@ -14,7 +14,7 @@ export default function WhoItsFor() {
     <section
       id="who-its-for"
       aria-labelledby="who-its-for-heading"
-      className="relative isolate overflow-hidden bg-black px-4 py-20 font-body text-white sm:px-8 sm:py-24"
+      className="relative isolate overflow-hidden bg-gray-200 px-4 py-20 font-body text-white sm:px-8 sm:py-24"
     >
       {/* blue glows: left edge and top-right corner */}
       <div
@@ -29,20 +29,20 @@ export default function WhoItsFor() {
         >
           Made for people who keep going
         </h2>
-        <p className="mt-8 max-w-2xl text-base leading-relaxed sm:text-lg">
+        <p className="mt-8 max-w-2xl text-base text-gray-800 leading-relaxed sm:text-lg">
           Rush is built for Gen Z and working youth between 18 and 30. If your day is full
           and your routine is on the move, this is for you.
         </p>
 
-        <ul className="mt-14 divide-y divide-white/25 sm:mt-16">
+        <ul className="mt-14 divide-y divide-black/25 sm:mt-16">
           {AUDIENCES.map((a) => (
             <li key={a.title} className="group py-4 first:pt-0 sm:py-5">
               <h3
-                className={`${wide} text-base font-medium tracking-wide transition-colors group-hover:text-rush-sky sm:text-lg`}
+                className={`${wide} text-base font-medium text-gray-800 tracking-wide transition-colors group-hover:text-rush-sky sm:text-lg`}
               >
                 {a.title}
               </h3>
-              <p className="mt-1.5 text-sm text-white/75">{a.body}</p>
+              <p className="mt-1.5 text-sm text-gray-800">{a.body}</p>
             </li>
           ))}
         </ul>

@@ -6,7 +6,7 @@ export default function ProductFaq() {
   return (
     <section
       aria-labelledby="product-faq-heading"
-      className="bg-black px-4 pt-16 pb-10 font-body text-white sm:px-8 sm:pt-20"
+      className="bg-white px-4 pt-16 pb-10 font-body text-gray-900 sm:px-8 sm:pt-20"
     >
       <div className="mx-auto max-w-6xl">
         <h2
@@ -16,7 +16,7 @@ export default function ProductFaq() {
           FAQ
         </h2>
         <div className="mt-8">
-          <FaqAccordion items={HOME_FAQS} defaultOpen={0} />
+          <FaqAccordion items={HOME_FAQS} defaultOpen={0} light />
         </div>
       </div>
     </section>

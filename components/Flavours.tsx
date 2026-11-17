@@ -1,9 +1,9 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import lemon from "@/public/Images/lemon.png";
-import mango from "@/public/Images/mango.jpg";
-import strawberry from "@/public/Images/strawberry.jpg";
-import tangyOrange from "@/public/Images/tangy-orange.jpg";
+import lemon from "@/public/Images/lemon.webp";
+import mango from "@/public/Images/mango.webp";
+import strawberry from "@/public/Images/strawberry.webp";
+import tangyOrange from "@/public/Images/tangy-orange.webp";
 
 // `slug` matches lib/flavours.ts, so each card opens /flavours/<slug>.
 const FLAVOURS: { name: string; slug: string; image: StaticImageData }[] = [
@@ -41,7 +41,7 @@ export default function Flavours() {
       {/* blue glows */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_45%_55%_at_100%_10%,rgba(16,110,220,0.5),transparent_70%),radial-gradient(ellipse_40%_45%_at_0%_100%,rgba(16,110,220,0.4),transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-gray-200"
       />
 
       <div className="mx-auto max-w-6xl">
@@ -53,7 +53,7 @@ export default function Flavours() {
           <br />
           tear, pour, go
         </h2>
-        <p className="mt-6 max-w-xl text-base leading-relaxed sm:text-lg">
+        <p className="mt-6 max-w-xl text-black text-base leading-relaxed sm:text-lg">
           Every Rush flavour comes as a single-serve powder sachet. Mix it with water and
           drink it chilled or at room temperature.
         </p>
@@ -74,7 +74,7 @@ export default function Flavours() {
                   y1="12"
                   x2={x}
                   y2="100"
-                  stroke="rgba(255,255,255,0.55)"
+                  stroke="rgba(0, 0, 0, 0.55)"
                   strokeWidth="1"
                   vectorEffect="non-scaling-stroke"
                 />

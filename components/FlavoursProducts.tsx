@@ -38,9 +38,9 @@ export default function FlavoursProducts() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search..."
-            className={`${wide} h-11 w-full rounded-sm bg-white/[0.07] pr-12 pl-6 text-xs tracking-wide text-white placeholder:text-white/80 outline-none transition focus:bg-white/10 focus:ring-1 focus:ring-rush-sky`}
+            className={`${wide} h-11 w-full rounded-sm bg-black/[0.07] pr-12 pl-6 text-xs tracking-wide text-black placeholder:text-black/80 outline-none transition focus:bg-black/10 focus:ring-1 focus:ring-rush-sky`}
           />
-          <SearchIcon className="pointer-events-none absolute top-1/2 right-5 size-4 -translate-y-1/2 text-white/80" />
+          <SearchIcon className="pointer-events-none absolute top-1/2 right-5 size-4 -translate-y-1/2 text-black/80" />
         </label>
 
         <label className="relative sm:w-[32%] sm:max-w-[300px]">
@@ -48,7 +48,7 @@ export default function FlavoursProducts() {
           <select
             value={flavour}
             onChange={(e) => setFlavour(e.target.value)}
-            className={`${wide} h-11 w-full cursor-pointer appearance-none rounded-sm bg-white/[0.12] pr-12 pl-4 text-xs tracking-wide text-white outline-none transition focus:ring-1 focus:ring-rush-sky`}
+            className={`${wide} h-11 w-full cursor-pointer appearance-none rounded-sm bg-black/[0.12] pr-12 pl-4 text-xs tracking-wide text-black outline-none transition focus:ring-1 focus:ring-rush-sky`}
           >
             <option value="all" className="bg-neutral-900">
               Flavours
@@ -59,7 +59,7 @@ export default function FlavoursProducts() {
               </option>
             ))}
           </select>
-          <ChevronIcon className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-white" />
+          <ChevronIcon className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-black" />
         </label>
       </div>
 
@@ -76,7 +76,7 @@ export default function FlavoursProducts() {
           ))}
         </ul>
       ) : (
-        <p className="mt-16 text-center text-white/70" role="status">
+        <p className="mt-16 text-center text-black/70" role="status">
           No flavours match &ldquo;{query}&rdquo;.
         </p>
       )}

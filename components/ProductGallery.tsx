@@ -1,6 +1,6 @@
 import Image from "next/image";
-import pocketShot from "@/public/Images/image-1.png";
-import booksShot from "@/public/Images/image-2.jpg";
+import pocketShot from "@/public/Images/image-1.webp";
+import booksShot from "@/public/Images/image-2.webp";
 
 const SHOTS = [
   {

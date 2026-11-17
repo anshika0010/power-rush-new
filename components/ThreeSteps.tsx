@@ -6,10 +6,10 @@ function SachetIcon() {
   return (
     <svg viewBox="0 0 64 64" className="h-full w-full" aria-hidden>
       {/* torn-off strip */}
-      <path d="M17 6 H47 V11 L41 13 L35 10 L29 13 L23 10 L17 12 Z" fill="#fff" transform="rotate(-8 32 10)" />
+      <path d="M17 6 H47 V11 L41 13 L35 10 L29 13 L23 10 L17 12 Z" fill="currentColor" transform="rotate(-8 32 10)" />
       {/* sachet body with jagged torn edge */}
-      <path d="M16 20 L22 17 L28 20 L34 17 L40 20 L48 18 V58 H16 Z" fill="#fff" />
-      <path d="M22 32 H42 M22 39 H36" stroke="#000" strokeWidth="3" strokeLinecap="round" />
+      <path d="M16 20 L22 17 L28 20 L34 17 L40 20 L48 18 V58 H16 Z" fill="currentColor" />
+      <path d="M22 32 H42 M22 39 H36" stroke="var(--cut)" strokeWidth="3" strokeLinecap="round" />
     </svg>
   );
 }
@@ -17,9 +17,9 @@ function SachetIcon() {
 function GlassIcon() {
   return (
     <svg viewBox="0 0 64 64" className="h-full w-full" aria-hidden>
-      <path d="M12 8 H52 L47 58 H17 Z" fill="#fff" />
-      <path d="M17.5 13 H46.5 L44.8 30 H19.2 Z" fill="#000" />
-      <path d="M40 4 L37 30" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
+      <path d="M12 8 H52 L47 58 H17 Z" fill="currentColor" />
+      <path d="M17.5 13 H46.5 L44.8 30 H19.2 Z" fill="var(--cut)" />
+      <path d="M40 4 L37 30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
     </svg>
   );
 }
@@ -27,7 +27,7 @@ function GlassIcon() {
 function BoltIcon() {
   return (
     <svg viewBox="0 0 64 64" className="h-full w-full" aria-hidden>
-      <path d="M38 4 L14 36 H30 L24 60 L50 26 H34 Z" fill="#fff" />
+      <path d="M38 4 L14 36 H30 L24 60 L50 26 H34 Z" fill="currentColor" />
     </svg>
   );
 }
@@ -50,13 +50,25 @@ const STEPS: { title: string; body: string; icon: ReactNode }[] = [
   },
 ];
 
-/** `className` overrides the section background (defaults to black). */
-export default function ThreeSteps({ className = "bg-black" }: { className?: string }) {
+/**
+ * `className` overrides the section background (defaults to black).
+ * `light` switches to a gray-100 background with dark text and black icons.
+ */
+export default function ThreeSteps({
+  className,
+  light = false,
+}: {
+  className?: string;
+  light?: boolean;
+}) {
+  const bg = className ?? (light ? "bg-gray-100" : "bg-black");
   return (
     <section
       id="steps"
       aria-labelledby="steps-heading"
-      className={`${className} px-4 py-20 font-body text-white sm:px-8 sm:py-24`}
+      className={`${bg} px-4 py-20 font-body sm:px-8 sm:py-24 ${
+        light ? "text-gray-900 [--cut:var(--color-gray-100)]" : "text-white [--cut:#000]"
+      }`}
     >
       <div className="mx-auto max-w-6xl text-center">
         <p className={`${wide} text-sm font-bold tracking-wide sm:text-base`}>How it works</p>
@@ -71,14 +83,14 @@ export default function ThreeSteps({ className = "bg-black" }: { className?: str
         <ol className="mt-16 grid gap-14 sm:grid-cols-3 sm:gap-8">
           {STEPS.map((s, i) => (
             <li key={s.title} className="group flex flex-col items-center">
-              <div className="size-24 transition-transform duration-300 group-hover:-translate-y-1 sm:size-28">
+              <div className={`size-24 ${light ? "text-black" : "text-white"} transition-transform duration-300 group-hover:-translate-y-1 sm:size-28`}>
                 {s.icon}
               </div>
               <h3 className={`${wide} mt-10 text-base font-bold text-rush-sky sm:text-lg`}>
                 <span className="sr-only">Step {i + 1}: </span>
                 {s.title}
               </h3>
-              <p className="mt-4 max-w-[16rem] text-sm leading-snug text-white/70">{s.body}</p>
+              <p className={`mt-4 max-w-[16rem] text-sm leading-snug ${light ? "text-gray-900/80" : "text-white/70"}`}>{s.body}</p>
             </li>
           ))}
         </ol>

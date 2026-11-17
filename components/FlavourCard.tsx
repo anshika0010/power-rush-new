@@ -21,8 +21,8 @@ export default function FlavourCard({ flavour, sizes }: { flavour: Flavour; size
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </div>
-      <h3 className={`${wide} mt-4 text-sm font-bold tracking-wide`}>{flavour.name}</h3>
-      <p className="mt-2 max-w-[30ch] text-sm leading-snug text-white/70">{flavour.description}</p>
+      <h3 className={`${wide} mt-4 text-sm font-bold text-black tracking-wide`}>{flavour.name}</h3>
+      <p className="mt-2 max-w-[30ch] text-sm leading-snug text-black/70">{flavour.description}</p>
     </Link>
   );
 }

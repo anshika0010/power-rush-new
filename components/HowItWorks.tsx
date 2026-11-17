@@ -1,5 +1,5 @@
 import Image from "next/image";
-import rushpower from "@/public/Images/rushpower.jpg";
+import rushpower from "@/public/Images/rushpower.webp";
 
 const SPECS = [
   { label: "Format", value: "Single-serve powder sachet" },

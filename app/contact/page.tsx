@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import logo from "@/public/Images/logo.png";
 
 export const metadata: Metadata = {
   title: "Contact us — Power Rush",
@@ -35,19 +33,9 @@ export default function ContactPage() {
         {/* Form panel with the sideways logo sliding behind it */}
         <section aria-label="Send us a message" className="relative isolate">
           {/* Sideways logo: top half sits above the panel, bottom half shows blurred through it */}
-          <div
-            aria-hidden
-            className="absolute left-1/2 top-0 -z-10 h-[300px] w-[114px] -translate-x-1/2 -translate-y-[45%] lg:h-[440px] lg:w-[167px]"
-          >
-            <Image
-              src={logo}
-              alt=""
-              sizes="440px"
-              className="absolute left-1/2 top-1/2 w-[300px] max-w-none -translate-x-1/2 -translate-y-1/2 rotate-90 lg:w-[440px]"
-            />
-          </div>
+        
 
-          <div className="bg-[linear-gradient(110deg,rgba(14,15,18,0.72)_0%,rgba(22,25,30,0.62)_45%,rgba(70,80,92,0.6)_100%)] px-4 py-14 backdrop-blur-md sm:px-8 sm:py-16 lg:py-20">
+          <div className="bg-white px-4 py-14 text-black sm:px-8 sm:py-16 lg:py-20">
             <div className="mx-auto max-w-6xl">
               <ContactForm />
             </div>

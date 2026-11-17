@@ -13,7 +13,7 @@ export default function BlogComingSoon() {
   return (
     <section
       aria-labelledby="blog-coming-soon-heading"
-      className="relative isolate overflow-hidden bg-black px-4 pt-10 pb-24 font-body text-white sm:px-8 sm:pb-28"
+      className="relative isolate overflow-hidden bg-gray-200 px-4 pt-10 pb-24 font-body text-white sm:px-8 sm:pb-28"
     >
       <div
         aria-hidden

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import LittleTips from "@/components/LittleTips";
 import Navbar from "@/components/Navbar";
 import StillHaveQuestion from "@/components/StillHaveQuestion";
 import ThreeSteps from "@/components/ThreeSteps";
-import howItWorksImg from "@/public/Images/how-it-works-img.png";
+import howItWorksImg from "@/public/Images/how-it-works-img.webp";
 
 export const metadata: Metadata = {
   title: "How it works — Power Rush",
@@ -23,7 +24,7 @@ export default function HowItWorksPage() {
         {/* Hero: photo behind copy on desktop, photo then copy on mobile */}
         <section
           aria-labelledby="hiw-hero-heading"
-          className="relative isolate w-full overflow-hidden lg:flex lg:aspect-[16/9] lg:max-h-[1000px] lg:min-h-[600px] lg:items-center"
+          className="relative isolate w-full overflow-hidden lg:flex lg:aspect-[16/9] lg:max-h-[400px] lg:min-h-[300px] lg:items-center"
         >
           <div className="relative aspect-[4/5] sm:aspect-video lg:absolute lg:inset-0 lg:-z-10 lg:aspect-auto">
             <Image
@@ -52,12 +53,12 @@ export default function HowItWorksPage() {
             />
           </div>
 
-          <div className="relative mx-auto w-full max-w-[1440px] px-4 pb-6 sm:px-8 lg:pt-16 lg:pb-0">
+          <div className="relative mx-auto w-full max-w-[1440px] px-4 pb-3 sm:px-8 lg:pt-16 lg:pb-0">
             <div className="-mt-10 lg:mt-0 lg:max-w-[36%]">
               <p className={`${wide} text-sm font-bold text-rush-sky sm:text-base`}>How it works</p>
               <h1
                 id="hiw-hero-heading"
-                className={`${wide} mt-4 text-[clamp(2.4rem,4.6vw,4.25rem)] font-bold leading-[0.98]`}
+                className={`${wide} mt-4 text-[clamp(1rem,2vw,2rem)] font-bold leading-[0.98]`}
               >
                 Tear. Pour.
                 <br />
@@ -71,7 +72,8 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        <ThreeSteps />
+        <ThreeSteps light />
+        <LittleTips />
         <StillHaveQuestion />
       </main>
       <Footer />

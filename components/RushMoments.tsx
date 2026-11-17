@@ -32,7 +32,7 @@ export default function RushMoments() {
     <section
       id="rush-moments"
       aria-labelledby="rush-moments-heading"
-      className="relative isolate overflow-hidden bg-black px-4 py-20 font-body text-white sm:px-8 sm:py-24"
+      className="relative isolate overflow-hidden bg-gray-200 px-4 py-20 font-body text-white sm:px-8 sm:py-24"
     >
       {/* blue glow on the right */}
       <div
@@ -51,7 +51,7 @@ export default function RushMoments() {
           <br />
           Rush it
         </h2>
-        <p className="mt-8 max-w-md text-base leading-relaxed sm:text-lg">
+        <p className="mt-8 max-w-md text-base text-gray-800 leading-relaxed sm:text-lg">
           Six everyday moments where tea, coffee or a cola can are the default. This is
           where Rush steps in.
         </p>

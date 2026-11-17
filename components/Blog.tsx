@@ -1,9 +1,9 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import heroImg from "@/public/Images/hero-image.jpg";
-import mango from "@/public/Images/mango.jpg";
-import rushpower from "@/public/Images/rushpower.jpg";
-import tangyOrange from "@/public/Images/tangy-orange.jpg";
+import heroImg from "@/public/Images/hero-image.webp";
+import mango from "@/public/Images/mango.webp";
+import rushpower from "@/public/Images/rushpower.webp";
+import tangyOrange from "@/public/Images/tangy-orange.webp";
 
 type Post = {
   slug: string;
@@ -56,7 +56,7 @@ export default function Blog() {
     <section
       id="blog"
       aria-labelledby="blog-heading"
-      className="relative isolate overflow-hidden bg-black px-4 py-20 font-body text-white sm:px-8 sm:py-24"
+      className="relative isolate overflow-hidden bg-gray-200 px-4 py-20 font-body text-white sm:px-8 sm:py-24"
     >
       {/* blue glow, top-left */}
       <div
@@ -99,10 +99,10 @@ export default function Blog() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className={`${wide} mt-5 text-[15px] font-semibold leading-tight`}>
+                <h3 className={`${wide} mt-5 text-[15px] text-gray-800 font-semibold leading-tight`}>
                   {p.title}
                 </h3>
-                <p className="mt-3 text-[13px] leading-snug text-white/60">{p.excerpt}</p>
+                <p className="mt-3 text-[13px] leading-snug text-gray-800">{p.excerpt}</p>
                 <span
                   className={`${wide} mt-auto pt-4 text-sm font-medium text-rush-sky underline-offset-4 group-hover:underline`}
                 >

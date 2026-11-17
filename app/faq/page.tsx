@@ -16,11 +16,11 @@ const wide = "font-wide uppercase";
 export default function FaqPage() {
   return (
     <>
-      <main className="relative flex-1 bg-black font-body text-white">
+      <main className="relative flex-1 bg-gray-400  font-body text-white">
         <Navbar />
 
         {/* Hero */}
-        <section className="relative isolate overflow-hidden px-4 pt-36 pb-16 text-center sm:px-8 sm:pt-40 sm:pb-24">
+        <section className="relative isolate bg-black overflow-hidden px-4 pt-36 pb-16 text-center sm:px-8 sm:pt-40 sm:pb-24">
           <div
             aria-hidden
             className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_55%_75%_at_5%_15%,rgba(16,110,220,0.6),transparent_70%)]"
@@ -41,7 +41,7 @@ export default function FaqPage() {
         </section>
 
         {/* Groups */}
-        <div className="mx-auto max-w-6xl space-y-16 px-4 pb-24 sm:px-8 sm:pb-28">
+        <div className="mx-auto max-w-6xl space-y-16  px-4 pb-24 sm:px-8 sm:pb-28">
           {FAQ_GROUPS.map((group, gi) => (
             <section key={group.title} aria-labelledby={`faq-group-${gi}`}>
               <h2

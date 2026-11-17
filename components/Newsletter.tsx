@@ -40,7 +40,7 @@ export default function Newsletter() {
           <p className="font-wide text-base font-bold tracking-wide sm:text-lg">NEWSLETTER</p>
           <h2
             id="newsletter-heading"
-            className="mt-4 font-wide text-[clamp(2.75rem,6vw,5rem)] font-bold leading-[0.95]"
+            className="mt-4 font-wide text-[clamp(2.1rem,11vw,5rem)] font-bold leading-[0.95] sm:text-[clamp(2.75rem,6vw,5rem)]"
           >
             <span className="block">START</span>
             <span className="block whitespace-nowrap">YOUR RUSH</span>

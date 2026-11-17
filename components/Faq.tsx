@@ -10,10 +10,10 @@ export default function Faq() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="relative isolate overflow-hidden bg-black px-4 py-20 font-body text-white sm:px-8 sm:py-24"
+      className="relative isolate overflow-hidden bg-gray-200 px-4 py-20 font-body text-white sm:px-8 sm:py-24"
     >
       <div className="mx-auto max-w-6xl">
-        <p className={`${wide} text-lg font-bold text-rush-sky sm:text-xl`}>FAQ</p>
+        <p className={`${wide} text-lg font-bold text-black sm:text-xl`}>FAQ</p>
         <h2
           id="faq-heading"
           className={`${wide} mt-6 text-[clamp(2.2rem,5.5vw,4.25rem)] font-bold leading-[1.02] text-rush-sky`}

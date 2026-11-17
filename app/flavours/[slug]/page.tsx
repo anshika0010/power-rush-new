@@ -49,14 +49,14 @@ async function Related({ params }: Props) {
 export default function FlavourDetailPage({ params }: Props) {
   return (
     <>
-      <main className="relative flex-1 bg-black font-body text-white">
+      <main className="relative flex-1 bg-white font-body text-gray-900">
         <Navbar />
         <Suspense fallback={<ProductHeroSkeleton />}>
           <Hero params={params} />
         </Suspense>
         <ProductAbout items={PRODUCT_DETAILS} />
         <ProductGallery />
-        <ThreeSteps className="bg-[linear-gradient(100deg,#000_0%,#0b0c0e_35%,#2a2d31_75%,#3a3e43_100%)]" />
+        <ThreeSteps light />
         <ProductFaq />
         <Suspense fallback={<RelatedProductsSkeleton />}>
           <Related params={params} />

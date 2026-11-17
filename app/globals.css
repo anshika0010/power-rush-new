@@ -10,8 +10,7 @@
   --color-rush-orange: #ff7a1a;
 
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-archivo-black);
+  --font-display: var(--font-tactic);
   --font-wide: var(--font-tactic);
   --font-body: var(--font-lexend);
 }
@@ -101,4 +100,16 @@ body {
   font-weight: 510;
   font-style: normal;
   font-display: swap;
+}
+/* =========================================================
+   HERO "Rush it" animations
+   ========================================================= */
+@keyframes rush-shine {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(320%); }
+}
+@keyframes rush-pop {
+  0% { transform: translate(-50%, -50%) scale(0.4); opacity: 0; }
+  60% { transform: translate(-50%, -50%) scale(1.25); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }

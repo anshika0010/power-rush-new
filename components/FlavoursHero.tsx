@@ -5,7 +5,7 @@ export default function FlavoursHero() {
   return (
     <section
       aria-labelledby="flavours-hero-heading"
-      className="relative px-4 pt-36 pb-12 text-center sm:px-8 sm:pt-40 sm:pb-16"
+      className="relative px-4 pt-36 pb-12  bg-black mb-6 text-center sm:px-8 sm:pt-40 sm:pb-16"
     >
       <h1
         id="flavours-hero-heading"

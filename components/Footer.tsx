@@ -8,14 +8,16 @@ const COLUMNS = [
       { label: "Flavours", href: "/flavours" },
       { label: "How it works", href: "/how-it-works" },
       { label: "FAQ", href: "/faq" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
-    title: "Rush",
+    title: "Social Links",
     links: [
-      { label: "Blog", href: "/blog" },
-      { label: "Newsletter", href: "/#newsletter" },
-      { label: "Contact", href: "/contact" },
+      { label: "INSTAGRAM", href: "https://www.instagram.com/powerrushofficial/" },
+      { label: "FACEBOOK", href: "https://www.facebook.com/powerrushofficials/" },
+      { label: "YOUTUBE", href: "https://www.youtube.com/@powerrushofficial" },
+      { label: "PINTEREST", href: "https://www.pinterest.com/powerrush_social/" },
     ],
   },
 ];
@@ -41,12 +43,25 @@ export default function Footer() {
               <ul className="mt-6 space-y-4">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <Link
-                      href={l.href}
-                      className="text-[15px] text-white/90 transition-colors hover:text-rush-sky"
-                    >
-                      {l.label}
-                    </Link>
+                    {l.href.startsWith("http") ? (
+                      // External (social) links open in a new tab.
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[15px] text-white/90 transition-colors hover:text-rush-sky"
+                      >
+                        {l.label}
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      </a>
+                    ) : (
+                      <Link
+                        href={l.href}
+                        className="text-[15px] text-white/90 transition-colors hover:text-rush-sky"
+                      >
+                        {l.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

@@ -18,9 +18,9 @@ export default function StillHaveQuestion() {
             id="still-question-heading"
             className="font-wide font-bold leading-[0.95]"
           >
-            <span className="block text-[clamp(2.75rem,6.5vw,5rem)]">STILL</span>
-            <span className="block whitespace-nowrap text-[clamp(2.75rem,6.5vw,5rem)]">HAVE A</span>
-            <span className="block text-[clamp(3.4rem,8.5vw,6.75rem)]">QUESTION?</span>
+            <span className="block text-[clamp(1.9rem,8.5vw,5rem)]">STILL</span>
+            <span className="block whitespace-nowrap text-[clamp(1.9rem,8.5vw,5rem)]">HAVE A</span>
+            <span className="block text-[clamp(2.2rem,11vw,6.75rem)]">QUESTION?</span>
           </h2>
           <p className="mt-6 max-w-sm text-base leading-snug sm:text-lg">
             Join the newsletter and reply to any email. We read every message.

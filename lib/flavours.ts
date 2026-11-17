@@ -1,12 +1,12 @@
 import type { StaticImageData } from "next/image";
-import lemon from "@/public/Images/lemon.png";
-import lemonHero from "@/public/Images/product-deatil-lemon-hero.jpg";
-import mangoHero from "@/public/Images/product-deatil-mango-hero.jpg";
-import orangeHero from "@/public/Images/product-deatil-tangy-orange-hero.jpg";
-import mango from "@/public/Images/mango.jpg";
-import strawberryHero from "@/public/Images/product-deatil-strawberry-hero.jpg";
-import strawberry from "@/public/Images/strawberry.jpg";
-import tangyOrange from "@/public/Images/tangy-orange.jpg";
+import lemon from "@/public/Images/lemon.webp";
+import lemonHero from "@/public/Images/product-deatil-lemon-hero.webp";
+import mangoHero from "@/public/Images/product-deatil-mango-hero.webp";
+import orangeHero from "@/public/Images/product-deatil-tangy-orange-hero.webp";
+import mango from "@/public/Images/mango.webp";
+import strawberryHero from "@/public/Images/product-deatil-strawberry-hero.webp";
+import strawberry from "@/public/Images/strawberry.webp";
+import tangyOrange from "@/public/Images/tangy-orange.webp";
 
 export type Flavour = {
   slug: string;
