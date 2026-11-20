@@ -6,12 +6,14 @@ import Navbar from "@/components/Navbar";
 import StillHaveQuestion from "@/components/StillHaveQuestion";
 import ThreeSteps from "@/components/ThreeSteps";
 import howItWorksImg from "@/public/Images/how-it-works-img.webp";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "How it works — Power Rush",
+export const metadata: Metadata = pageMetadata({
+  path: "/how-it-works",
+  title: "How to Use Power Rush | Tear, Pour, Mix, Go",
   description:
-    "Tear. Pour. Mix. Go. Rush is a single-serve powder sachet. All you need is a glass or bottle of water.",
-};
+    "How to use Power Rush: tear the sachet, pour into water, sip. A measured caffeine drink powder with no kettle and no queue. Read serving tips and join the list.",
+});
 
 const wide = "font-wide uppercase";
 

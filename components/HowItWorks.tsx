@@ -69,7 +69,7 @@ export default function HowItWorks() {
       <div className="relative mx-auto mt-8 max-w-[1920px] lg:aspect-video">
         <h2
           id="how-it-works-heading"
-          className={`${wide} relative z-10 px-4 text-[clamp(2rem,4.4vw,4.5rem)] font-semibold leading-[1.02] sm:px-8 lg:absolute lg:left-0 lg:top-[5%] lg:px-[2%] xl:left-[calc((100%-72rem)/2)] xl:px-8`}
+          className={`${wide} relative z-10 px-4 text-center text-[clamp(0.5rem,2.4vw,2.5rem)] font-semibold leading-[1.02] sm:px-8 lg:absolute lg:inset-x-0 lg:top-[5%]`}
         >
           Three steps
           <br />

@@ -1,8 +1,14 @@
 import { HOME_FAQS } from "@/lib/faqs";
-import FaqAccordion from "./FaqAccordion";
+import FaqAccordion, { type FaqItem } from "./FaqAccordion";
 
 /** FAQ block on the flavour detail page. */
-export default function ProductFaq() {
+export default function ProductFaq({
+  title = "FAQ",
+  items = HOME_FAQS,
+}: {
+  title?: string;
+  items?: FaqItem[];
+}) {
   return (
     <section
       aria-labelledby="product-faq-heading"
@@ -13,10 +19,10 @@ export default function ProductFaq() {
           id="product-faq-heading"
           className="font-wide text-base font-bold uppercase tracking-wide sm:text-lg"
         >
-          FAQ
+          {title}
         </h2>
         <div className="mt-8">
-          <FaqAccordion items={HOME_FAQS} defaultOpen={0} light />
+          <FaqAccordion items={items} defaultOpen={0} light />
         </div>
       </div>
     </section>

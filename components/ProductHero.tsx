@@ -6,10 +6,17 @@ export default function ProductHero({ flavour }: { flavour: Flavour }) {
   const image = flavour.heroImage ?? flavour.image;
 
   return (
-    <section aria-labelledby="product-hero-heading" className="relative isolate overflow-hidden bg-black pt-20 sm:pt-0">
-      <h1 id="product-hero-heading" className="sr-only">
-        {flavour.name}
-      </h1>
+    <section
+      aria-labelledby={flavour.content ? undefined : "product-hero-heading"}
+      aria-label={flavour.content ? `${flavour.name} product photo` : undefined}
+      className="relative isolate overflow-hidden bg-black pt-20 sm:pt-0"
+    >
+      {/* Flavours with an intro show a visible H1 in <ProductIntro> instead. */}
+      {!flavour.content && (
+        <h1 id="product-hero-heading" className="sr-only">
+          {flavour.name}
+        </h1>
+      )}
 
       <div className="relative aspect-[4/3] w-full sm:aspect-[16/9] lg:max-h-[900px]">
         <Image

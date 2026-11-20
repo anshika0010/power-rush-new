@@ -147,24 +147,19 @@ export default function Hero() {
         {/* Copy */}
         <div>
           <p className="font-wide text-[11px] font-bold uppercase tracking-[0.16em] text-white/75 sm:text-xs">
-            Caffeine drink sachet · Mix with water
+            Performance drink mix · Just add water
           </p>
           <h1 className="mt-4 font-wide text-[clamp(1.3rem,2.6vw,2.6rem)] font-bold leading-[1.02] tracking-tight">
-            <span className="block sm:whitespace-nowrap">Upgrade yourself</span>
-            <span
-              className="block bg-clip-text text-transparent sm:whitespace-nowrap"
-              style={{
-                backgroundImage: `linear-gradient(90deg, #ffd21f ${charge}%, #ffffff ${charge}%)`,
-              }}
-            >
-             From Coffee.
-            </span>
+            <span className="block sm:whitespace-nowrap">Upgrade yourself
+From Coffee</span>
+          
+            
+            
           </h1>
 
-          <p className="mt-8 max-w-lg text-base leading-relaxed text-white/85 sm:text-lg lg:mt-14">
-            One sachet. One glass of water. Rush is a single-serve caffeine drink for the
-            afternoon slump, the late-night syllabus and the long road. No kettle, no queue,
-            no can.
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg lg:mt-8">
+           One sachet. One glass of water. A single-serve performance drink mix for the 3 PM slump, the late-night study session and the long journey. No kettle, no queue, no can.
+
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
@@ -178,7 +173,8 @@ export default function Hero() {
               href="#rush-moments"
               className="rounded-full border-2 border-white/80 px-7 py-3 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
             >
-              See Rush moments
+              See how it works
+
             </Link>
           </div>
 
@@ -202,7 +198,7 @@ export default function Hero() {
         </div>
 
         {/* Interactive energy card */}
-        <div className="relative mx-auto w-full max-w-[490px] lg:mx-0 lg:justify-self-end">
+        <div className="relative mx-auto w-full max-w-[590px] lg:mx-0 lg:justify-self-end">
           <div
             className={`relative rounded-[28px] bg-[#1f1d47] p-6 shadow-[0_30px_80px_rgba(10,6,60,0.55)] transition-shadow duration-700 sm:p-8 ${
               done ? "ring-2 ring-white/20" : ""

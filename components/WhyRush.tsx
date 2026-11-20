@@ -1,15 +1,15 @@
 const REASONS = [
   {
     title: "Convenience",
-    body: "A single-serve sachet that fits in a pocket, a laptop bag or a glovebox. Nothing to measure, nothing to wash.",
+    body: "A single-serve sachet that fits in a pocket, laptop bag or glovebox. Nothing to measure, nothing to wash.",
   },
   {
     title: "Flavour",
-    body: "Multiple flavours, built to taste like a treat and not like a chore. Pick the one that matches your mood.",
+    body: "Four fruit flavours made to taste like a treat, not a chore. Pick the one that matches your mood.",
   },
   {
-    title: "Caffeine",
-    body: "Everyday caffeinated energy for the moments your attention drops, in a portable format you can use anywhere.",
+    title: "Performance formula",
+    body: "Caffeine, creatine, taurine and B-complex in one measured serving. The same dose every time, printed on the pack.",
   },
 ];
 
@@ -34,15 +34,13 @@ export default function WhyRush() {
 
         <h2
           id="why-rush-heading"
-          className={`${wide} mx-auto mt-10 max-w-5xl text-[clamp(1.8rem,4.2vw,3.4rem)] leading-[1.05] text-[#0b5ed7]`}
+          className={`${wide} mx-auto mt-10 max-w-6xl text-[clamp(1.8rem,4.2vw,3.4rem)] leading-[1.05] text-[#0b5ed7]`}
         >
-          Energy for everyday moments, not workouts
+          Performance for everyday moments, not just workouts
         </h2>
 
         <p className="mx-auto mt-12 max-w-4xl text-base leading-relaxed sm:text-lg">
-          Rush is made for people aged 18 to 30 who are busy, on the move and tired of the
-          same three options. Chai takes a break. Coffee takes a queue. A cola can takes a
-          fridge. A Rush sachet takes a pocket and a glass of water.
+      Rush is made for people aged 18 to 30 who are busy, on the move and tired of the same three options. Coffee takes a queue. A can takes a fridge. A Rush sachet takes a pocket and a glass of water.
         </p>
 
         <ol className="mt-16 grid gap-14 sm:mt-20 md:grid-cols-3 md:gap-10">

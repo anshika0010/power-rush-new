@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Lexend } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { SITE_URL, pageMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,9 +25,14 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Power Rush — Your Everyday Performance",
-  description:
-    "One sachet. One glass of water. Rush is a single-serve caffeine drink mix.",
+  // Resolves relative canonical / og:url / og:image paths to absolute URLs.
+  metadataBase: new URL(SITE_URL),
+  ...pageMetadata({
+    path: "/",
+    title: "Power Rush | Performance Drink Mix Sachets, Just Add Water",
+    description:
+      "Power Rush is a single-serve drink mix with 125 mg caffeine, 3 g creatine and 500 mg taurine. No sugar. Tear, pour, shake, go. Join the list for offers.",
+  }),
   // Search engine / site ownership verification tags
   verification: {
     google: "g1gWWjPZaSoYPz2Ces8g60TyxT4Mid3xYALIXyYngJw",

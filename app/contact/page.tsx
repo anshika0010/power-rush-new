@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact us — Power Rush",
+export const metadata: Metadata = pageMetadata({
+  path: "/contact",
+  title: "Contact Power Rush | Questions, Orders and Partnerships",
   description:
-    "Have a question, need assistance, or want to know more about our products? Get in touch with the Rush team.",
-};
+    "Ask the Power Rush team about products, orders, wholesale or working together. Send a message and a real person will reply. Or try the FAQ first.",
+});
 
 export default function ContactPage() {
   return (
@@ -18,15 +20,14 @@ export default function ContactPage() {
         {/* Header */}
         <section className="px-4 pt-36 pb-48 text-center sm:px-8 sm:pt-40 lg:pb-56">
           <h1 className="font-wide text-[clamp(2.75rem,8vw,6rem)] font-bold uppercase leading-none text-rush-sky">
-            Contact us
+            Get in touch
+
           </h1>
           <p className="mt-4 font-wide text-sm font-bold uppercase tracking-wide sm:text-base">
             We&rsquo;d love to hear from you!
           </p>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/75">
-            Have a question, need assistance, or want to know more about our products?
-            We&rsquo;re here to help. Reach out to us and our team will get back to you as
-            soon as possible.
+        Have a question about our products, your order or working with us? Send us a message and our team will get back to you soon. 
           </p>
         </section>
 
@@ -41,6 +42,7 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+        
       </main>
       <Footer />
     </>

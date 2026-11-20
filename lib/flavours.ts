@@ -7,6 +7,13 @@ import mango from "@/public/Images/mango.webp";
 import strawberryHero from "@/public/Images/product-deatil-strawberry-hero.webp";
 import strawberry from "@/public/Images/strawberry.webp";
 import tangyOrange from "@/public/Images/tangy-orange.webp";
+import type { FaqItem } from "@/components/FaqAccordion";
+import {
+  LEMON_CONTENT,
+  MANGO_CONTENT,
+  ORANGE_CONTENT,
+  STRAWBERRY_CONTENT,
+} from "@/lib/flavour-content";
 
 export type Flavour = {
   slug: string;
@@ -16,6 +23,16 @@ export type Flavour = {
   image: StaticImageData;
   /** Wide 16:9 shot for the product detail hero. Falls back to `image`. */
   heroImage?: StaticImageData;
+  /** Flavour-specific page copy. Flavours without it use the shared copy. */
+  content?: FlavourContent;
+};
+
+export type FlavourContent = {
+  /** Answer-first intro shown under the hero, with the visible H1. */
+  intro: string;
+  details: ProductDetail[];
+  faqTitle: string;
+  faqs: FaqItem[];
 };
 
 export const FLAVOURS: Flavour[] = [
@@ -26,6 +43,7 @@ export const FLAVOURS: Flavour[] = [
     description: "Juicy, ripe and tropical. A sweet, smooth lift for a slow afternoon.",
     image: mango,
     heroImage: mangoHero,
+    content: MANGO_CONTENT,
   },
   {
     slug: "strawberry",
@@ -34,6 +52,7 @@ export const FLAVOURS: Flavour[] = [
     description: "Bright, berry-sweet and easy to sip. A fresh pick-me-up any time of day.",
     image: strawberry,
     heroImage: strawberryHero,
+    content: STRAWBERRY_CONTENT,
   },
   {
     slug: "orange",
@@ -42,6 +61,7 @@ export const FLAVOURS: Flavour[] = [
     description: "Tangy, zesty and full of citrus. A sharp kick for a busy morning.",
     image: tangyOrange,
     heroImage: orangeHero,
+    content: ORANGE_CONTENT,
   },
   {
     slug: "lemon",
@@ -50,6 +70,7 @@ export const FLAVOURS: Flavour[] = [
     description: "Crisp, clean and refreshing. A cool, sour-sweet boost to reset your day.",
     image: lemon,
     heroImage: lemonHero,
+    content: LEMON_CONTENT,
   },
 ];
 
@@ -57,17 +78,28 @@ export function getFlavour(slug: string) {
   return FLAVOURS.find((f) => f.slug === slug);
 }
 
-export type ProductDetail = { title: string; body: string | string[] };
+export type ProductBullet = string | { lead: string; text: string };
 
-/** Same formula in every flavour, so the detail copy is shared. */
+/** One accordion section on the flavour page. Any combination of the parts is allowed. */
+export type ProductDetail = {
+  title: string;
+  paragraphs?: string[];
+  bullets?: ProductBullet[];
+  /** Two-column label/value table. */
+  facts?: [label: string, value: string][];
+};
+
+/** Shared copy for flavours that don't have their own `content` yet. */
 export const PRODUCT_DETAILS: ProductDetail[] = [
   {
     title: "Description",
-    body: "Power Rush is a performance drink mix combining Creatine Monohydrate, Caffeine, Taurine and B-Complex in a convenient single-serve sachet. Designed to support energy, focus and performance, so you can push harder and get more out of your day.",
+    paragraphs: [
+      "Power Rush is a performance drink mix combining Creatine Monohydrate, Caffeine, Taurine and B-Complex in a convenient single-serve sachet. Designed to support energy, focus and performance, so you can push harder and get more out of your day.",
+    ],
   },
   {
     title: "Key benefits",
-    body: [
+    bullets: [
       "125 mg caffeine per serving for a fixed, predictable boost.",
       "3 g creatine monohydrate and 500 mg taurine in every serving.",
       "B-Complex vitamins to round out the formula.",
@@ -76,7 +108,7 @@ export const PRODUCT_DETAILS: ProductDetail[] = [
   },
   {
     title: "Why choose Power Rush?",
-    body: [
+    bullets: [
       "Quick and portable: no kettle, no queue, just add water.",
       "A light sachet that fits in any bag, for the office, study table or road.",
       "The same dose every time, printed on the pack.",
@@ -84,7 +116,7 @@ export const PRODUCT_DETAILS: ProductDetail[] = [
   },
   {
     title: "What to avoid",
-    body: [
+    bullets: [
       "More than one serving a day.",
       "Having it close to bedtime.",
       "Use by children, pregnant or breastfeeding women, or people sensitive to caffeine.",

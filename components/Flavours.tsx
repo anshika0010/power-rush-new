@@ -104,6 +104,20 @@ export default function Flavours() {
                       sizes="(min-width: 1536px) 316px, (min-width: 1280px) 295px, (min-width: 1024px) 23vw, 50vw"
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
+                    {/* Flavour name, revealed on hover / keyboard focus */}
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 via-black/25 to-transparent p-4 opacity-0 transition-opacity duration-500 group-focus-within:opacity-100 group-hover:opacity-100 sm:p-6"
+                    >
+                      <p
+                        className={`${wide} translate-y-3 text-[clamp(1rem,2vw,1.6rem)] leading-tight text-white transition-transform duration-500 ease-out group-focus-within:translate-y-0 group-hover:translate-y-0`}
+                      >
+                        {f.name}
+                        <span className="mt-1 block text-[0.6em] tracking-[0.2em] text-rush-sky">
+                          Rush
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </Link>
 

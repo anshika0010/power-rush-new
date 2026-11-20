@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import { FAQ_GROUPS } from "@/lib/faqs";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "FAQ — Power Rush",
+export const metadata: Metadata = pageMetadata({
+  path: "/faq",
+  title: "The Rush Performance FAQ | Caffeine, Ingredients and How to Use It",
   description:
-    "Answers to common questions about Rush: what it is, how to use it, caffeine, flavours and who it's for.",
-};
+    "How much caffeine does Power Rush contain per serving? 125 mg. Read FAQs on ingredients, how adults should use it, safety and where to buy Power Rush online.",
+});
 
 const wide = "font-wide uppercase";
 
@@ -38,6 +41,16 @@ export default function FaqPage() {
             <br />
             asked questions
           </h1>
+          <p className="relative mx-auto mt-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+            Short, direct answers to the questions we get most often. If yours is not here,{" "}
+            <Link
+              href="/contact"
+              className="text-rush-sky underline underline-offset-4 hover:text-white"
+            >
+              send us a message
+            </Link>
+            .
+          </p>
         </section>
 
         {/* Groups */}

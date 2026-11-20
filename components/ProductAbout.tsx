@@ -65,15 +65,41 @@ export default function ProductAbout({
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="max-w-2xl pt-2 pb-2 text-[13px] leading-snug text-gray-700 sm:text-sm">
-                    {Array.isArray(item.body) ? (
-                      <ul className="list-disc space-y-1 pl-5 marker:text-rush-blue">
-                        {item.body.map((line) => (
-                          <li key={line}>{line}</li>
-                        ))}
+                  <div className="max-w-2xl space-y-3 pt-2 pb-2 text-sm leading-relaxed text-gray-700 sm:text-[15px]">
+                    {item.paragraphs?.map((para) => <p key={para}>{para}</p>)}
+
+                    {item.bullets && (
+                      <ul className="list-disc space-y-1.5 pl-5 marker:text-rush-blue">
+                        {item.bullets.map((b) =>
+                          typeof b === "string" ? (
+                            <li key={b}>{b}</li>
+                          ) : (
+                            <li key={b.lead}>
+                              <strong className="font-semibold text-gray-900">{b.lead}</strong>{" "}
+                              {b.text}
+                            </li>
+                          ),
+                        )}
                       </ul>
-                    ) : (
-                      <p>{item.body}</p>
+                    )}
+
+                    {item.facts && (
+                      <table className="w-full max-w-lg border-collapse text-left">
+                        <caption className="sr-only">{item.title}</caption>
+                        <tbody>
+                          {item.facts.map(([label, value]) => (
+                            <tr key={label} className="border-b border-gray-300 last:border-0">
+                              <th
+                                scope="row"
+                                className="py-2 pr-6 align-top font-semibold text-gray-900"
+                              >
+                                {label}
+                              </th>
+                              <td className="py-2">{value}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     )}
                   </div>
                 </div>

@@ -4,12 +4,16 @@ import FlavoursProducts from "@/components/FlavoursProducts";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Flavours — Power Rush",
+export const metadata: Metadata = pageMetadata({
+  path: "/flavours",
+  title: "Power Rush Flavours | Lemon, Orange, Strawberry, Mango Drink Mix",
   description:
-    "Mango, Strawberry, Orange and Lemon. Find your Power Rush flavour: a little boost for your everyday.",
-};
+    "Explore The Rush Performance flavours - lemon, orange, strawberry and mango caffeine drink powder in single serving sachets. Buy online or get notified when your flavour lands.",
+  socialDescription:
+    "Explore Power Rush flavours: lemon, orange, strawberry and mango caffeine drink powder in single serving sachets. Buy online or get notified when your flavour lands.",
+});
 
 export default function FlavoursPage() {
   return (

@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import BlogComingSoon from "@/components/BlogComingSoon";
+import { Suspense } from "react";
+import BlogList, { BlogListSkeleton } from "@/components/BlogList";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
+import { getBlogSummaries } from "@/lib/blogs";
 import blogHeroImg from "@/public/Images/blog-hero-img.webp";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog — Power Rush",
+export const metadata: Metadata = pageMetadata({
+  path: "/blog",
+  title: "Energy Tips for Work, Study & Travel | The Rush Performance",
   description:
-    "Energy tips for your day: practical reads on staying switched on at work, at the study table, on the road and on the screen.",
-};
+    "Explore practical energy tips for work, study, travel and screen time. Discover everyday caffeine insights and stay switched on with Power Rush.",
+});
+
+async function Articles() {
+  return <BlogList blogs={await getBlogSummaries()} />;
+}
 
 export default function BlogPage() {
   return (
@@ -67,7 +75,9 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <BlogComingSoon />
+        <Suspense fallback={<BlogListSkeleton />}>
+          <Articles />
+        </Suspense>
         <Newsletter />
       </main>
       <Footer />

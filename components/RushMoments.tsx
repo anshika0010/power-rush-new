@@ -40,20 +40,20 @@ export default function RushMoments() {
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_45%_60%_at_95%_40%,rgba(16,110,220,0.55),transparent_70%)]"
       />
 
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <h2
           id="rush-moments-heading"
           className={`${wide} font-bold text-[clamp(2.2rem,5.5vw,4.25rem)] leading-[1.02] text-rush-sky`}
         >
-          When your
-          <br />
-          energy drops
+          When your Focus drops
+          
+       
           <br />
           Rush it
         </h2>
-        <p className="mt-8 max-w-md text-base text-gray-800 leading-relaxed sm:text-lg">
-          Six everyday moments where tea, coffee or a cola can are the default. This is
-          where Rush steps in.
+        <p className="mt-8  text-base text-gray-800 leading-relaxed sm:text-lg">
+         Six everyday moments where coffee or a can is the default. This is where Rush steps in.
+
         </p>
 
         <ol className="mt-14 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-16 lg:grid-cols-4">
