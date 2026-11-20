@@ -30,11 +30,10 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <Logo />
             <p className="mt-8 text-base font-medium uppercase tracking-wide">
-              Chai se aage. Rush se shuru.
+              Switch to Rush. 
             </p>
             <p className="mt-4 max-w-xs text-[15px] leading-snug text-white/90">
-              Single-serve caffeine drink sachets for everyday moments.
-            </p>
+Single-serve performance drink mix for everyday moments.            </p>
           </div>
 
           {COLUMNS.map((col) => (

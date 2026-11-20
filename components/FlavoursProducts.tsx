@@ -43,18 +43,18 @@ export default function FlavoursProducts() {
           <SearchIcon className="pointer-events-none absolute top-1/2 right-5 size-4 -translate-y-1/2 text-black/80" />
         </label>
 
-        <label className="relative sm:w-[32%] sm:max-w-[300px]">
+        <label className="relative sm:w-[32%] sm:max-w-[300px] ">
           <span className="sr-only">Filter by flavour</span>
           <select
             value={flavour}
             onChange={(e) => setFlavour(e.target.value)}
             className={`${wide} h-11 w-full cursor-pointer appearance-none rounded-sm bg-black/[0.12] pr-12 pl-4 text-xs tracking-wide text-black outline-none transition focus:ring-1 focus:ring-rush-sky`}
           >
-            <option value="all" className="bg-neutral-900">
+            <option value="all" className="bg-gray-300">
               Flavours
             </option>
             {FLAVOURS.map((f) => (
-              <option key={f.slug} value={f.slug} className="bg-neutral-900">
+              <option key={f.slug} value={f.slug} className="bg-gray-100">
                 {f.name}
               </option>
             ))}
